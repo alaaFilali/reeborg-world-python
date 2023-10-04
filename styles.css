@@ -1,0 +1,37 @@
+body {
+    /* background-color: #f0f0f0; */
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Naskh Arabic", serif;
+}
+
+p{
+    font-size: larger;
+}
+
+.book-page {
+    background-color: white;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    /* margin: 20px; */
+    padding: 40px; 
+}
+
+.book-title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.content {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+pre {
+    direction: ltr;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+}
