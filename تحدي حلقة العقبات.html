@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تحدي حلقة العقبات</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            max-width: 100%;
+            /* Limits the image to the width of its parent container */
+            height: auto;
+            /* Maintains the aspect ratio */
+        }
+
+        .image-container {
+            max-width: 80%;
+            /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+    </style>
+
+    <div class="book-page">
+        <h1 class="book-title">تحدي حلقة العقبات</h1>
+        <div class="content">
+            <p>
+                الان سوف نقوم بحل التحدي الاول لنا في عالم ريبورغ وهو حلقة العقبات 
+            </p>
+            <p>
+                ويمكنك الوصول اليه من خلال الضغط على القائمة حيث توجد كلمة 
+                alone 
+                واختار 
+                hurdle 1
+            </p>
+            <div class="image-container">
+                <img src="images/10.png">
+            </div>
+            <p>
+                والفكرة هنا ان الروبوت عليه ان يتخطى عدد من العقبات حتى يصل الى خط النهاية
+            </p>
+            <div class="image-container">
+                <img src="images/11.png">
+            </div>
+            <p>
+                يمكنك استعمال الدوال 
+                move 
+                و 
+                turn_left 
+                وايضا ماتعرفه عن الدوال والحلقات ودالة المجال وحاول جعل عدد التعليمات التي 
+                يجب ان تنفذ حتى يصل الى خط النهاية اقل ما يمكن وهكذا تجعل الكود الخاص بك 
+                قصير وسهل القراءة ولكن ينفذ العمل المراد منه 
+                وسوف يصل الى خط النهاية هكذا: 
+            </p>
+            <div class="image-container">
+                <img src="images/12.png">
+            </div>
+            <p>
+                ببساطة حل التحدي هو كتابة الكود اللازم لتخطي عقبة واحدة واستخدام 
+                حلقة 
+                for 
+                وجعلها تدور بعدد العقبات
+            </p>
+            <pre><code>
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+for _ in range(6):
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+            </code></pre>
+            <p>
+                كان ايضا بامكاننا ان نعرف دالة جديدة تسمى 
+                jump 
+                فيها تعليمات قفز عقبة واحدة ثم مناداتها 
+                6
+                مرات 
+            </p>
+            <pre><code>
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+
+for _ in range(6):
+    jump()
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
