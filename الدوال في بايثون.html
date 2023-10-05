@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>الدوال في بايثون</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            max-width: 100%;
+            /* Limits the image to the width of its parent container */
+            height: auto;
+            /* Maintains the aspect ratio */
+        }
+
+        .image-container {
+            max-width: 80%;
+            /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+    </style>
+
+    <div class="book-page">
+        <h1 class="book-title">
+            الدوال في بايثون
+        </h1>
+        <div class="content">
+            <p>
+                لقد استعملنا الدوال في الدروس السابقة كثيرا وهي عبارة عن دوال 
+                مبنية في 
+                python 
+                اي كل ماتحتاجه لاستعمالها هو مناداتها باسمها كالدالة 
+                len 
+                و 
+                max 
+                و 
+                print 
+                ...الخ
+            </p>
+            <p>
+                واحدة من اكثر الدوال التي استعملناها هي دالة 
+                print 
+                ونعرف انها دالة بأن لديها اسم ثم زوج من الاقواس 
+                واحيانا نضع شيء داخل الاقواس او شيئين وفي دالة 
+                print 
+                نضع ما نريد طباعته اي 
+                string 
+            </p>
+            <pre><code>
+print("Hello")
+            </code></pre>
+            <p>
+                وكل الدوال الاخرى تعمل بنفس الطريقة مثلا مع دالة 
+                len 
+                نعطيها 
+                string 
+                مثلا وترجع لنا طوله ويمكننا تخزينه في متغير
+            </p>
+            <pre><code>
+length = len("Hello")
+            </code></pre>
+            <p>
+                الان ماذا لو اردنا ان نصنع دوال خاصة بنا؟ ولفعل ذلك نستعمل الكلمة 
+                def 
+                اي اننا نعرف دالة او بالانجليزية 
+                defining
+                ثم نعطيها اسم ثم نضع الاقواس واخر شيء هي نقطتين فوق بعض والتي
+                تعني ان كل شيء بعدها وامامه فراغ ينتمي الى الدالة 
+            </p>
+            <pre><code>
+def my_function():
+    print("Hello")
+    print("Bye")
+            </code></pre>
+            <p>
+                ولكن لو اشغل البرنامج الان لن يحدث شيء والسبب هو اننا يجب ان ننادي الدالة 
+                باستخدام اسمها والاقواس ولا نضع اي شيء داخلها لان الدالة الخاصة بنا 
+                لا تحتاج مدخلات
+            </p>
+            <pre><code>
+def my_function():
+    print("Hello")
+    print("Bye")
+
+
+my_function()
+            </code></pre>
+            <pre><code>
+Hello 
+Bye
+            </code></pre>
+            <p>
+                الان بعدما تعرفنا على كيفية تعريف دالة سوف ننتقل الى
+                <a href="https://reeborg.ca/reeborg.html">https://reeborg.ca/reeborg.html</a>
+                عالم ريبورغ
+                وهو ببساطة رجل ألي وسوف نعطيه تعليمات لينفذها عن طريق كود بايثون
+            </p>
+            <p>
+                الان هناك مكان لكتابة كود بايثون 
+            </p>
+            <div class="image-container">
+                <img src="images/1.png">
+            </div>
+            <p>
+                وعندما ننتهي من كتابة الكود يمكننا الضغط على زر
+                play 
+                 لينفذ الروبوت التعليمات
+            </p>
+            <div class="image-container">
+                <img src="images/2.png">
+            </div>
+            <p>
+                لو تضغط على 
+                reeborg's keyboard 
+                سوف تظهر لك نافذة بالدوال التي يمكنك مناداتها لتجعل الروبوت يفعل شيء 
+                ما مثل ان يمشي للامام او يدور لليسار
+            </p>
+            <div class="image-container">
+                <img src="images/3.png">
+            </div>
+            <p>
+                الدالة التي تجعل الروبوت يمشي مربع للامام هي الدالة 
+                move
+            </p>
+            <pre><code>
+move()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/4.png">
+            </div>
+            <p>
+                فلو اردنا ان يمشي ثلاث مربعات للامام ننادي الدالة ثلاث مرات
+            </p>
+            <pre><code>
+move()
+move()
+move()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/5.png">
+            </div>
+            <p>
+                هناك زر بجانب زر ال 
+                play 
+                الذي ينفذ التعليمات واحدة واحدة على عكس زر 
+                play 
+                الذي ينفذ كل التعليمات مرة واحدة 
+            </p>
+            <p>
+                هناك دوال اخرى يمكنك استعمالها ك 
+                turn_left 
+                التي تجعل الروبوت يدور لليسار
+            </p>
+            <pre><code>
+move()
+move()
+move()
+turn_left()
+move()
+move()
+move()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/6.png">
+            </div>
+            <p>
+                الان لو تلاحظ هناك دالة الدوران الى اليسار ولكن ليس هناك دالة للدوران للخلف
+            </p>
+            <p>
+                يمكننا منادات الدالة 
+                turn_left 
+                مرتين وسوف يدور الروبوت للخلف 
+            </p>
+            <pre><code>
+turn_left()
+turn_left()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/7.png">
+            </div>
+            <p>
+                الان ماذا لو اردنا الذهاب مربعين الى الامام ثم الدوران الى الخلف ثم المشي 
+                مربعين ثم الدوران مرة اخرى
+            </p>
+            <pre><code>
+move()
+move()
+turn_left()
+turn_left()
+move()
+move()
+turn_left()
+turn_left()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/8.png">
+            </div>
+            <p>
+                ولكن كان بامكاننا ان نعرف دالة تسمى الدوران للخلف وننادي داخلها الدالة 
+                turn_left
+                مرتين وهكذا ننادي الدالة الجديدة الخاصة بنا
+            </p>
+            <pre><code>
+def turn_around():
+    turn_left()
+    turn_left()
+
+
+move()
+move()
+turn_around()
+move()
+move()
+turn_around()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/8.png">
+            </div>
+            <p>
+                وهكذا قمنا بجعل الكود الخاص بنا اقل اسطر و الاهم من ذلك سهل القراءة
+            </p>
+            <p>
+                الان سوف نعرف دالة تجعل الروبوت الخاص بنا يدور الى اليمين
+            </p>
+            <pre><code>
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+            </code></pre>
+            <p>
+                الان باستعمال هذه الدالة سوف نجعل الروبوت الخاص بنا يرسم مربع 
+                2 * 2
+            </p>
+            <pre><code>
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+turn_left()
+move()
+turn_right()
+move()
+turn_right()
+move()
+turn_right()
+move()
+            </code></pre>
+            <div class="image-container">
+                <img src="images/9.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
