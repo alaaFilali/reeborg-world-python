@@ -35,3 +35,17 @@ pre {
     white-space: pre-wrap;
     font-family: 'Courier New', monospace;
 }
+
+img {
+    max-width: 100%;
+    /* Limits the image to the width of its parent container */
+    height: auto;
+    /* Maintains the aspect ratio */
+}
+
+.image-container {
+    max-width: 80%;
+    /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
