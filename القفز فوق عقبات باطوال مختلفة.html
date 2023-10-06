@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>القفز فوق عقبات باطوال مختلفة</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">
+            القفز فوق عقبات باطوال مختلفة
+        </h1>
+        <div class="content">
+            <p>
+                اخر تحدي قبل تحدي المتاهة الاخير هو 
+                hurdle 4
+                وفي هذه النسخة من عالم العقبات اطوال الجدران التي على الروبوت تخطيها 
+                لها اطوال مختلفة بالاضافة الى مكانها وعددها 
+            </p>
+            <p>
+                حاول كتابة كود يخول الروبوت الوصول الى خط النهاية في كل الاحوال 
+                باقل عدد من الاسطر البرمجية
+            </p>
+            <p>
+                الحل: 
+            </p>
+            <p>
+                ماعلينا فعله هو التغيير في دالة القفز 
+                jump 
+                حتى تقفز اي جدار مهما كان طوله وهناك شروط سوف تساعدنا لتحقيق ذلك 
+            </p>
+            <p>
+                هناك شرط جديد 
+                wall_on_right 
+                التي يرجع 
+                True
+                ان كان هناك جدار على يمين الروبوت بحيث سوف نستعمله ونقول للروبوت بعد ان 
+                يدور لليسار مادام ان هناك جدار على يمينك ابق تمشي للامام 
+                ثم بعدها يتجه الى يمين ثم يمشي ثم يتجه الى اليمين مرة اخرى ثم يعاود الكرة 
+                حتى يصل الى الاسفل بحيث مادام ان الامام فارغ ابقى تمشي 
+                وفي الاخير اتجه الى اليسار وهذا سوف يضمن تخطي اي جدار مهما كان طوله
+            </p>
+            <pre><code>
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
